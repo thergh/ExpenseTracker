@@ -1,7 +1,7 @@
 package org.example;
 
 
-public abstract class Transaction {
+public abstract class Transaction{
     double amount;
     String category;
     String description;
@@ -16,7 +16,7 @@ public abstract class Transaction {
     public String getCategory(){ return category; }
     public String getDescription(){ return description; }
 
-    public abstract double getType();
+    public abstract String getType();
 
     @Override
     public String toString(){
