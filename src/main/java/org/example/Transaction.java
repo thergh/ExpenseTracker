@@ -20,6 +20,6 @@ public abstract class Transaction{
 
     @Override
     public String toString(){
-        return "[ " + getType() + ", " + amount + ", " + category + ", " + description + " ]";
+        return "[ " + getType() + " ]: " + amount + " | " + category + " | " + description + " | ";
     }
 }

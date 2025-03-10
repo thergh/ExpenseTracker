@@ -14,7 +14,7 @@ public class UI {
         System.out.println("\tUsage:\tviewBalance");
         System.out.println("VIEW CATEGORY");
 
-        System.out.println("VIEW SPLIT");
+        System.out.println("VIEW CATEGORY EXPENSES");
 
         System.out.println("EXPORT");
 
