@@ -13,12 +13,9 @@ public class Manager{
         balance = 0;
     }
 
-
     public double getBalance(){ return balance; }
 
-
     public ArrayList<Transaction> getTransactions(){ return transactions; }
-
 
     public ArrayList<Transaction> getCategoryExpenses(String category){
         ArrayList<Transaction> categoryExpenses = new ArrayList<>();
@@ -30,7 +27,6 @@ public class Manager{
         return categoryExpenses;
     }
 
-
     public void addTransaction(Transaction transaction){
         transactions.add(transaction);
 
@@ -41,9 +37,6 @@ public class Manager{
             balance -= transaction.getAmount();
         }
     }
-
-
-
 }
 
 

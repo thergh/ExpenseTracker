@@ -34,7 +34,6 @@ public class UI {
         System.out.println();
     }
 
-
     public static void displayAddIncome(Income income){
         System.out.println("Added income.");
         System.out.println("Amount: " + income.getAmount());
@@ -42,7 +41,6 @@ public class UI {
         System.out.println("Description: " + income.getDescription());
         System.out.println();
     }
-
 
     public static void displayAddExpense(Expense expense){
         System.out.println("Added expense.");
@@ -52,7 +50,6 @@ public class UI {
         System.out.println();
     }
 
-
     public static void displayViewTransactions(Manager manager){
         System.out.println("Transactions:");
         System.out.println();
@@ -61,7 +58,6 @@ public class UI {
             System.out.println(t.toString());
         }
     }
-
 
     public static void displayViewCategory(Manager manager, String category){
         System.out.println("Transactions in the " + category + " category:");
@@ -74,12 +70,10 @@ public class UI {
         }
     }
 
-
     public static void displayBalance(Manager manager){
         System.out.println("Balance: " + manager.getBalance());
         System.out.println();
     }
-
 
     public static void displayViewCategoryBalance(Manager manager, String category){
         ArrayList<Transaction> transactions = manager.getCategoryExpenses(category);
