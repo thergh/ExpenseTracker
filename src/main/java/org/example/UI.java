@@ -69,7 +69,7 @@ public class UI {
         ArrayList<Transaction> transactions = manager.getCategoryExpenses(category);
         for(Transaction t: transactions){
             if(Objects.equals(t.getCategory(), category)){
-                System.out.println(t.toString());
+                System.out.println(t);
             }
         }
         System.out.println();
