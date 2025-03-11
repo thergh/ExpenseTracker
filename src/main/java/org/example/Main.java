@@ -18,7 +18,7 @@ public class Main {
             switch(command){
                 case "exit":
                     break loop;
-                case "addIncome":{
+                case "addIncome": {
                     double amount = Double.parseDouble(splitString[1]);
                     String category = splitString[2];
                     String description = splitString[3];
@@ -31,8 +31,7 @@ public class Main {
                     UI.displayAddIncome(income);
                     break;
                 }
-
-                case "addExpense":{
+                case "addExpense": {
                     double amount = Double.parseDouble(splitString[1]);
                     String category = splitString[2];
                     String description = splitString[3];
@@ -45,13 +44,22 @@ public class Main {
                     UI.displayAddExpense(expense);
                     break;
                 }
-
+                case "viewCategory": {
+                    String category = splitString[1];
+                    UI.displayViewCategory(manager, category);
+                    break;
+                }
                 case "viewTransactions":
                     UI.displayViewTransactions(manager);
                     break;
                 case "viewBalance":
                     UI.displayBalance(manager);
                     break;
+                case "viewCategoryBalance": {
+                    String category = splitString[1];
+                    UI.displayViewCategoryBalance(manager, category);
+                    break;
+                }
                 case "help":
                     UI.displayHelp();
                     break;
