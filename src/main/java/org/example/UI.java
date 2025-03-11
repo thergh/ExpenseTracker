@@ -72,7 +72,6 @@ public class UI {
                 System.out.println(t);
             }
         }
-        System.out.println();
     }
 
 

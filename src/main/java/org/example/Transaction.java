@@ -2,9 +2,9 @@ package org.example;
 
 
 public abstract class Transaction{
-    double amount;
-    String category;
-    String description;
+    private final double amount;
+    private final String category;
+    private final String description;
 
     public Transaction(double amount, String category, String description){
         if(amount < 0){
