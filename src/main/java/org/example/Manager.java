@@ -4,6 +4,7 @@ import java.lang.reflect.Array;
 import java.util.*;
 import java.util.HashMap;
 
+
 public class Manager{
     ArrayList<Transaction> transactions;
     double balance;
@@ -13,8 +14,12 @@ public class Manager{
         balance = 0;
     }
 
+
     public double getBalance(){ return balance; }
+
+
     public ArrayList<Transaction> getTransactions(){ return transactions; }
+
 
     public ArrayList<Transaction> getCategoryExpenses(String category){
         ArrayList<Transaction> categoryExpenses = new ArrayList<Transaction>();
@@ -25,6 +30,7 @@ public class Manager{
         }
         return categoryExpenses;
     }
+
 
     public HashMap<String, Double> getExpensesByCategory(){
         HashMap<String, Double> hMap = new HashMap<String, Double>();
@@ -54,8 +60,16 @@ public class Manager{
         return hMap;
     }
 
+
     public void addTransaction(Transaction transaction){
         transactions.add(transaction);
+
+        if(Objects.equals(transaction.getType(), "Income")){
+            balance += transaction.getAmount();
+        }
+        else{
+            balance -= transaction.getAmount();
+        }
     }
 
 

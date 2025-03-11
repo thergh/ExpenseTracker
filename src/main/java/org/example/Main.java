@@ -18,22 +18,42 @@ public class Main {
             switch(command){
                 case "exit":
                     break loop;
-                case "addIncome":
+                case "addIncome":{
                     double amount = Double.parseDouble(splitString[1]);
                     String category = splitString[2];
                     String description = splitString[3];
+                    if(amount < 0){
+                        System.out.println("Amount can't be negative");
+                        break;
+                    }
                     Income income = new Income(amount, category, description);
                     manager.addTransaction(income);
                     UI.displayAddIncome(income);
                     break;
-                case "addExpense":
+                }
+
+                case "addExpense":{
+                    double amount = Double.parseDouble(splitString[1]);
+                    String category = splitString[2];
+                    String description = splitString[3];
+                    if(amount < 0){
+                        System.out.println("Amount can't be negative");
+                        break;
+                    }
+                    Expense expense = new Expense(amount, category, description);
+                    manager.addTransaction(expense);
+                    UI.displayAddExpense(expense);
                     break;
+                }
+
                 case "viewTransactions":
                     UI.displayViewTransactions(manager);
                     break;
                 case "viewBalance":
+                    UI.displayBalance(manager);
                     break;
                 case "help":
+                    UI.displayHelp();
                     break;
                 default:
                     UI.displayHelp();

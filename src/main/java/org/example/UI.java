@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 
+
 public class UI {
     public static void displayHelp(){
         System.out.println("\n\t\t\tAVAILABLE COMMANDS");
@@ -27,6 +28,7 @@ public class UI {
         System.out.println();
     }
 
+
     public static void displayAddIncome(Income income){
         System.out.println("Added income.");
         System.out.println("Amount: " + income.getAmount());
@@ -35,10 +37,25 @@ public class UI {
         System.out.println();
     }
 
+
+    public static void displayAddExpense(Expense expense){
+        System.out.println("Added expense.");
+        System.out.println("Amount: " + expense.getAmount());
+        System.out.println("Category: " + expense.getCategory());
+        System.out.println("Description: " + expense.getDescription());
+        System.out.println();
+    }
+
+
     public static void displayViewTransactions(Manager manager){
         ArrayList<Transaction> transactions = manager.getTransactions();
         for(Transaction t: transactions){
             System.out.println(t.toString());
         }
+    }
+
+
+    public static void displayBalance(Manager manager){
+        System.out.println("Balance: " + manager.getBalance());
     }
 }

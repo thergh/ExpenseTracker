@@ -7,6 +7,9 @@ public abstract class Transaction{
     String description;
 
     public Transaction(double amount, String category, String description){
+        if(amount < 0){
+            throw new ArithmeticException("Amount can't be negative");
+        }
         this.amount = amount;
         this.category = category;
         this.description = description;
