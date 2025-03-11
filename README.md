@@ -1,6 +1,11 @@
 # Expense Tracker CLI Application
 
-## AVAILABLE COMMANDS
+## Skills and technologies used in this project
+- OOP (Encapsulation, Inheritance, Polymorphism)
+- Maven
+- JUnit
+
+## Available commands
 ```
 addIncome <amount> <source> <description>
 ```
