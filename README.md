@@ -1,4 +1,5 @@
 # Expense Tracker CLI Application
+A command line application allowing logging and analyzing income and expenses divided by categories.
 
 ## Skills and technologies used in this project
 - OOP (Encapsulation, Inheritance, Polymorphism)
